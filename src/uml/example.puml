@@ -1,6 +1,30 @@
 @startuml Voiture
 interface VoitureDuChampionnatDeFormuleUn {
-     + Vroum():void  
-     + Tut(): void
+     + Accelerer():void  
+     + Tourner(): void
+     + Freiner(): void
 }
+
+
+class SafetyCar{
+     - Instance:SafetyCar
+     + getInstance():SafetyCar
+}
+
+Class CarFactory{
+     + getCarType(CarType type): VoitureDuChampionnatDeFormuleUn
+}
+
+enum CarType
+
+class Car
+
+class Course
+
+
+VoitureDuChampionnatDeFormuleUn <|.. Car
+Car <|.. Course
+SafetyCar <|.. Course
+
+
 @enduml

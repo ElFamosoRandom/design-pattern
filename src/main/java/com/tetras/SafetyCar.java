@@ -1,5 +1,5 @@
 package com.tetras;
 
-public class Car {
+public class SafetyCar {
     
 }

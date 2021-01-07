@@ -6,7 +6,7 @@ package com.tetras;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-class LibraryTest {
+class FormulaOneTest {
     @Test
     void testSomeLibraryMethod() {
         Library classUnderTest = new Library();
