@@ -1,5 +1,6 @@
-@startuml exemple
-class Library {
-    + someLibraryMethod(): boolean 
+@startuml Voiture
+interface VoitureDuChampionnatDeFormuleUn {
+     + Vroum():void  
+     + Tut(): void
 }
 @enduml
