@@ -1,11 +1,14 @@
 package com.tetras;
 
+import java.util.HashMap;
+
 public class Header implements iAfficheComponent {
 
-    @Override
-    public void affiche() {
-        // TODO Auto-generated method stub
+    HashMap<String, String> hashHeader = new HashMap<String,String>();
 
+    @Override
+    public String affiche() {
+        return hashHeader.get("key");
     }
     
 }
