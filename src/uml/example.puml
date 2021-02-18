@@ -1,43 +1,4 @@
-@startuml Voiture
-interface VoitureDuChampionnatDeFormuleUn {
-     + Accelerer():void  
-     + Tourner(): void
-     + Freiner(): void
-}
+@startuml CourseUML
 
 
-class SafetyCar{
-     - Instance:SafetyCar
-     + getInstance():SafetyCar
-}
-
-class CarFactory{
-     + getCarType(CarType type): VoitureDuChampionnatDeFormuleUn
-}
-
-class Mercedes{
-     + getCouleur():String 
-}
-
-class Ferrari{
-     + getCouleur():String 
-}
-
-class Renault{
-     + getCouleur():String 
-}
-
-enum CarType
-
-class Course
-
-VoitureDuChampionnatDeFormuleUn <|.. Mercedes
-VoitureDuChampionnatDeFormuleUn <|.. Ferrari
-VoitureDuChampionnatDeFormuleUn <|.. Renault
-Mercedes <|.. Course
-Ferrari <|.. Course
-Renault <|.. Course
-SafetyCar <|.. Course
-
-
-@enduml
+@enduml[]
