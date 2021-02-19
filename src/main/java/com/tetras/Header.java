@@ -4,6 +4,7 @@ import java.util.HashMap;
 
 public class Header implements iAfficheComponent {
 
+    //Classe Header pour l'élément header de la requête
     HashMap<String, String> hashHeader = new HashMap<String,String>();
 
     @Override

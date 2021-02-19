@@ -5,8 +5,7 @@ import java.util.List;
 
 public class RequeteHttpComposite implements iAfficheComponent {
 
-    private Body body;
-    private Url path;
+    //Classe Requete pour le design pattern composite : on ajoute des component dans le composite pour ensuite correctement les afficher
     private List<iAfficheComponent> component = new ArrayList<iAfficheComponent>();
     String result ="";
 
@@ -20,37 +19,8 @@ public class RequeteHttpComposite implements iAfficheComponent {
         component.add(components);
     }
 
+    //Methode getComposant permettant essentiellement de récupérer l'id de l'élément lors de l'affichage
     public iAfficheComponent getComposant(int id){
         return(iAfficheComponent) component.get(id);
     }
-    
-
-    /**
-     * @return Body return the body
-     */
-    public Body getBody() {
-        return body;
-    }
-
-    /**
-     * @param body the body to set
-     */
-    public void setBody(Body body) {
-        this.body = body;
-    }
-
-    /**
-     * @return Url return the url
-     */
-    public Url getUrl() {
-        return path;
-    }
-
-    /**
-     * @param url the url to set
-     */
-    public void setUrl(Url Path) {
-        this.path = Path;
-    }
-
 }

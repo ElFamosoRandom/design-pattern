@@ -2,6 +2,7 @@ package com.tetras;
 
 public class Body implements iAfficheComponent {
 
+    //Classe body pour l'élément body de la requête
     private String content;
 
     /**
