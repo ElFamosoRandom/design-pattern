@@ -69,22 +69,21 @@ public class WebServerTest {
         assertEquals(500, responseResult);
     }
 
+    @Test
     public void TestAffichage() {
         HashMap map = new HashMap<String,String>();
 
         map.put("testAffiche","test4");
         Header head = new Header(map);
         Body body = new Body("Contenu");
-        Url url = new Url(null);
+        Url url = new Url("/affiche");
 
         RequeteHttpComposite requetteAffiche = new RequeteHttpComposite();
         requetteAffiche.ajouter(url);
         requetteAffiche.ajouter(head);
         requetteAffiche.ajouter(body);
 
-        requetteAffiche.affiche();
-
-        
-        //assertEquals(500, responseResult);
+        String Result = requetteAffiche.affiche();
+        assertEquals(Result,"/affiche{testAffiche=test4}Contenu");
     }
 }
