@@ -1,4 +1,40 @@
-@startuml CourseUML
+@startuml ServeurWeb
+interface iAfficheComponent {
+     + Affiche():String  
+}
+
+interface iServeurWeb {
+     + Reponse():Int  
+}
+
+class RequeteHttpComposite{
+    - iAfficheComponent : List<component>
+    + ajoute(iAfficheComponent components): String
+    + getComposant(int id): iAfficheComponent
+}
+
+class ServeurWebProxy{
+
+}
+
+class ServeurWeb{
+
+}
+
+class Body
+class Header
+class Url
+RequeteHttpComposite "1" *-- "many" iAfficheComponent : contains
 
 
-@enduml[]
+iAfficheComponent <|-- RequeteHttpComposite
+iAfficheComponent <|-- Body
+iAfficheComponent <|-- Header
+iAfficheComponent <|-- Url
+
+ServeurWebProxy ..|> iServeurWeb
+ServeurWebProxy --> ServeurWeb
+ServeurWeb ..|> iServeurWeb
+
+
+@enduml
