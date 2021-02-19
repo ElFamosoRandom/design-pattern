@@ -8,7 +8,13 @@ public class Header implements iAfficheComponent {
 
     @Override
     public String affiche() {
-        return hashHeader.get("key");
+        return hashHeader.toString();
     }
+
+    public Header(HashMap<String, String> hashHeader) {
+        this.hashHeader = hashHeader;
+    }
+
+
     
 }

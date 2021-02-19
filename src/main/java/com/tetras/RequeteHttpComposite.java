@@ -1,18 +1,27 @@
 package com.tetras;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class RequeteHttpComposite implements iAfficheComponent {
 
     private Body body;
     private Url path;
-
+    private List<iAfficheComponent> component = new ArrayList<iAfficheComponent>();
+    String result ="";
 
     @Override
     public String affiche() {
-        return path.getPath();
+        component.stream().forEach(t -> result = result + t.affiche());
+        return result ;
     }
 
-    public void ajouter(){
-        //A remplir
+    public void ajouter(iAfficheComponent components){
+        component.add(components);
+    }
+
+    public iAfficheComponent getComposant(int id){
+        return(iAfficheComponent) component.get(id);
     }
     
 

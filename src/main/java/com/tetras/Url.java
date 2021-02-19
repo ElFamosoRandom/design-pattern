@@ -26,8 +26,6 @@ public class Url implements iAfficheComponent {
     @Override
     public String affiche() {
         return path;
-        // TODO Auto-generated method stub
-
     }
 
 }
